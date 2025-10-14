@@ -119,6 +119,7 @@ form.addEventListener("input", checkInputs);
  */
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  
 
   // TODO: Hämta alla värden från formuläret
   // TODO: Skapa ett reviewData-objekt
