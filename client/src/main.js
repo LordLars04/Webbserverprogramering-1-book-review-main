@@ -112,13 +112,15 @@ const loadReviews = async () => {
 /**
  * Lyssna på ändringar i formuläret
  */
-form.addEventListener("input", checkInputs);
+form.addEventListener("input", checkInputs);   
 
 /**
  * Hanterar när formuläret skickas
  */
 form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  e.preventDefault(); 
+
+  if (!bookTitle || !author || !reviewer || !rating || !review) return alert("Fyll i alla fält");
   
 
   // TODO: Hämta alla värden från formuläret
