@@ -10,6 +10,11 @@ const submitBtn = document.querySelector("button[type='submit']");
 
 // ========================================
 // KONSTANTER
+let bookTitle = form.elements.bookTitle.value; //läser in det som skrivs i namn input
+let author = form.elements.author.value;
+let reviewer = form.elements.reviewer.value;
+let rating = form.elements.rating.value;
+let review = form.elements.review.value;
 // ========================================
 const API_URL = "http://localhost:3000/reviews";
 
@@ -120,10 +125,39 @@ form.addEventListener("input", checkInputs);
 form.addEventListener("submit", async (e) => {
   e.preventDefault(); 
 
-  if (!bookTitle || !author || !reviewer || !rating || !review) return alert("Fyll i alla fält");
+  const bookTitle = form.elements.bookTitle.value;
+  const author = form.elements.author.value;
+  const reviewer = form.elements.reviewer.value;
+  const rating = form.elements.rating.value;
+  const review = form.elements.review.value;
+
+  if (!bookTitle || !author || !reviewer || !rating || !review) {
+    return alert("Fyll i alla fält");
+  }
+
+  const reviewData = {
+    bookTitle,
+    author,
+    reviewer,
+    rating,
+    review,
+  };
+  
+  try {
+    const response = await axios.post('http://localhost:3000/reviews', reviewData);
+
+    if (response.status === 201) {
+      alert("Recension wurde geschickt!");
+      form.reset(); // Rensa formuläret
+      loadReviews(); // Ladda om recensioner
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Kunde inte skicka recensionen.");    
+  }
   
 
-  // TODO: Hämta alla värden från formuläret
+  // TODO: Hämta alla värden från formuläret 
   // TODO: Skapa ett reviewData-objekt
   // TODO: Skicka POST-request till backend
   // TODO: Om det lyckas: visa meddelande, rensa formuläret, ladda om recensioner
