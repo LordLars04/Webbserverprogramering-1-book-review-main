@@ -2,11 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.mjs",
   "scripts": {
-    "dev": "nodemon server.mjs"    
+    "dev": "nodemon server.mjs"
   },
-  
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +13,6 @@
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
     "uuid": "^13.0.0"
-  }
+  },
+  "keywords": []
 }

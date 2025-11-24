@@ -1,5 +1,6 @@
 // ========================================
 // IMPORTS
+import axios from "axios";
 // ========================================
 
 // ========================================
@@ -10,11 +11,7 @@ const submitBtn = document.querySelector("button[type='submit']");
 
 // ========================================
 // KONSTANTER
-let bookTitle = form.elements.bookTitle.value; //läser in det som skrivs i namn input
-let author = form.elements.author.value;
-let reviewer = form.elements.reviewer.value;
-let rating = form.elements.rating.value;
-let review = form.elements.review.value;
+
 // ========================================
 const API_URL = "http://localhost:3000/reviews";
 
@@ -26,6 +23,18 @@ const API_URL = "http://localhost:3000/reviews";
  * Kontrollerar om alla formulärfält är ifyllda
  */
 const checkInputs = () => {
+  const bookTitle = form.elements.bookTitle.value; //läser in det som skrivs i namn input
+const author = form.elements.author.value;
+const reviewer = form.elements.reviewer.value;
+const rating = form.elements.rating.value;
+const review = form.elements.review.value;
+
+ if (!bookTitle || !author || !reviewer || !rating || !review) {
+    submitBtn.disabled = true;  
+  } else {
+    submitBtn.disabled = false;
+  }
+
   // TODO: Hämta värden från alla input-fält
   // TODO: Aktivera/inaktivera submit-knappen baserat på om alla fält är ifyllda
 };
@@ -125,11 +134,11 @@ form.addEventListener("input", checkInputs);
 form.addEventListener("submit", async (e) => {
   e.preventDefault(); 
 
-  const bookTitle = form.elements.bookTitle.value;
-  const author = form.elements.author.value;
-  const reviewer = form.elements.reviewer.value;
-  const rating = form.elements.rating.value;
-  const review = form.elements.review.value;
+let bookTitle = form.elements.bookTitle.value; //läser in det som skrivs i namn input
+let author = form.elements.author.value;
+let reviewer = form.elements.reviewer.value;
+let rating = form.elements.rating.value;
+let review = form.elements.review.value;
 
   if (!bookTitle || !author || !reviewer || !rating || !review) {
     return alert("Fyll i alla fält");
@@ -150,6 +159,8 @@ form.addEventListener("submit", async (e) => {
       alert("Recension wurde geschickt!");
       form.reset(); // Rensa formuläret
       loadReviews(); // Ladda om recensioner
+    } else {
+      alert("Fehler");
     }
   } catch (error) {
     console.error("Error:", error);

@@ -1,0 +1,20 @@
+[
+  {
+    "bookTitle": "Scooby Doo",
+    "author": "Hara",
+    "reviewer": "hatler",
+    "rating": "5",
+    "review": "daf",
+    "id": "b860257d-45ca-47b1-a2ef-d7cc5ad5a836",
+    "timestamp": "2025-11-24T09:45:47.787Z"
+  },
+  {
+    "bookTitle": "Scooby Doo",
+    "author": "Hara",
+    "reviewer": "hatler",
+    "rating": "5",
+    "review": "jhyguh",
+    "id": "bac8c8bd-fed8-49bf-853a-c8460555ac52",
+    "timestamp": "2025-11-24T09:54:38.832Z"
+  }
+]
