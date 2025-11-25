@@ -16,5 +16,14 @@
     "review": "jhyguh",
     "id": "bac8c8bd-fed8-49bf-853a-c8460555ac52",
     "timestamp": "2025-11-24T09:54:38.832Z"
+  },
+  {
+    "bookTitle": "Jup der Franzose",
+    "author": "Alfons Ruedinger",
+    "reviewer": "Oliver",
+    "rating": "3",
+    "review": "So naja",
+    "id": "aa29e59f-eda7-4f29-bae5-8df2cffb6749",
+    "timestamp": "2025-11-25T12:55:10.554Z"
   }
 ]
