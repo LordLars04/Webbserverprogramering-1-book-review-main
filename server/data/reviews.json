@@ -79,5 +79,23 @@
     "review": "hkjb",
     "id": "fbc4245f-dbb7-4005-aca6-52cf19c89155",
     "timestamp": "2025-12-02T11:45:20.593Z"
+  },
+  {
+    "bookTitle": "asdf",
+    "author": "adf",
+    "reviewer": "asdf",
+    "rating": "3",
+    "review": "asdfas",
+    "id": "6515e547-1efb-45be-970a-892afa8b85ee",
+    "timestamp": "2025-12-02T12:02:03.181Z"
+  },
+  {
+    "bookTitle": "Melvins Äventyr",
+    "author": "Oliver Kalzone",
+    "reviewer": "Lars",
+    "rating": "5",
+    "review": "Spännande",
+    "id": "fe6c7469-8139-4556-9017-1e63cba54db5",
+    "timestamp": "2025-12-02T12:41:01.628Z"
   }
 ]

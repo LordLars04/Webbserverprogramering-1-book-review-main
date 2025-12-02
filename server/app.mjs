@@ -26,6 +26,19 @@ if (!fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, '[]', 'utf-8');
 }
 
+const getReviews = () => {
+     const data = fs.readFileSync(filePath, "utf-8"); // Läser filens innehåll som text
+    try {
+        if(fs.existsSync(filePath)) return JSON.parse(data);
+
+        return [];
+    } catch (error) {
+        console.error('Error reading reviews:', error);
+
+        return [];
+    }
+};
+
 const saveReview = (reviewData) => {
     let reviews = [];
     try {
@@ -54,6 +67,18 @@ const saveReview = (reviewData) => {
 
     
 };
+
+app.get("/reviews", (req, res) => {
+    try {
+        const reviews = getReviews();
+
+        res.status(200).json({success: true, data: reviews});
+    } catch (error) {
+        console.error("Error readign file", error);
+
+        res.status(500).json({success: false });
+    }
+});
 
 app.post("/reviews", (req, res) => {
     const {bookTitle, author, reviewer, rating, review} = req.body;
