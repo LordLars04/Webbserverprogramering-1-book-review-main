@@ -79,23 +79,5 @@
     "review": "hkjb",
     "id": "fbc4245f-dbb7-4005-aca6-52cf19c89155",
     "timestamp": "2025-12-02T11:45:20.593Z"
-  },
-  {
-    "bookTitle": "Melvins Äventyr",
-    "author": "Oliver ",
-    "reviewer": "Lars",
-    "rating": "5",
-    "review": "Spännande",
-    "id": "a1f4c7a6-baf5-467c-ab11-28f81bdcf5e5",
-    "timestamp": "2025-12-02T11:46:42.423Z"
-  },
-  {
-    "bookTitle": "Melvins Äventyr",
-    "author": "Oliver ",
-    "reviewer": "Lars",
-    "rating": "4",
-    "review": "ljewr",
-    "id": "8f6ae0c5-3d70-4a32-a76f-f5bff59edbc7",
-    "timestamp": "2025-12-02T11:48:25.507Z"
   }
 ]
