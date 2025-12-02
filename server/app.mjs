@@ -29,15 +29,31 @@ if (!fs.existsSync(filePath)) {
 const saveReview = (reviewData) => {
     let reviews = [];
     try {
-        const content = fs.readFileSync(filePath, 'utf-8') || '[]';
-        reviews = JSON.parse(content);
-    } catch (err) {
+        const data = fs.readFileSync(filePath, "utf-8"); // Läser filens innehåll som text
+        reviews = JSON.parse(data); // Gör om texten till JavaScript-format (oftast en array)
+
+        // Om filen inte innehåller en array, återställ den till en tom array
+        if(!Array.isArray(reviews))reviews = []
+    } catch (error) {
+        // Om JSON är trasigt eller något går fel -> nollställ reviews
+        console.error("Error during read of reviews.json:", error);
         reviews = [];
     }
 
     reviews.push(reviewData);
-    fs.writeFileSync(filePath, JSON.stringify(reviews, null, 2));
-}
+
+    try {
+        console.log({ reviews: reviews });
+
+        // Sparar tillbaka alla recensioner till reviews.json
+        fs.writeFileSync(filePath, JSON.stringify(reviews, null, 2));
+    } catch (error) {
+        // Skriv ut error meddelande i terminalen
+        console.error("Error writing to reviews.json");
+    }
+
+    
+};
 
 app.post("/reviews", (req, res) => {
     const {bookTitle, author, reviewer, rating, review} = req.body;

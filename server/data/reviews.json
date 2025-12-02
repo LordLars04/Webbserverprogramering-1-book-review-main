@@ -25,5 +25,50 @@
     "review": "So naja",
     "id": "aa29e59f-eda7-4f29-bae5-8df2cffb6749",
     "timestamp": "2025-11-25T12:55:10.554Z"
+  },
+  {
+    "bookTitle": "10 kleine jägermeister",
+    "author": "Emil Hultin",
+    "reviewer": "Etnad",
+    "rating": "5",
+    "review": "Jägermeister !!!!",
+    "id": "a07ccd63-1406-445c-99ba-6a431f56aef6",
+    "timestamp": "2025-12-01T08:53:53.883Z"
+  },
+  {
+    "bookTitle": "Oliver ist gay",
+    "author": "Dante",
+    "reviewer": "Rudolfo",
+    "rating": "5",
+    "review": "Based on a true story\n",
+    "id": "bd6584b1-483a-47d0-b1cb-15252f85baa2",
+    "timestamp": "2025-12-01T08:59:41.267Z"
+  },
+  {
+    "bookTitle": "Luther",
+    "author": "Heinz Willhelm Ruediger",
+    "reviewer": "Lars",
+    "rating": "3",
+    "review": "Nicht so meins\n",
+    "id": "ba9a07d7-50fc-47a7-a516-6bde8c101534",
+    "timestamp": "2025-12-01T09:12:02.646Z"
+  },
+  {
+    "bookTitle": "Dante in Deutschland",
+    "author": "Lars",
+    "reviewer": "Lars",
+    "rating": "5",
+    "review": "Echter Klassiker",
+    "id": "6e1ca08b-1e43-4498-8b19-35f6db30bcd2",
+    "timestamp": "2025-12-01T09:25:52.343Z"
+  },
+  {
+    "bookTitle": "Buch",
+    "author": "Melvin",
+    "reviewer": "Rainer",
+    "rating": "4",
+    "review": "Naja",
+    "id": "b477dd9d-c205-4778-ba50-778cf7cf7b24",
+    "timestamp": "2025-12-01T09:41:30.424Z"
   }
 ]

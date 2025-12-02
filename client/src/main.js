@@ -13,7 +13,7 @@ const submitBtn = document.querySelector("button[type='submit']");
 // KONSTANTER
 
 // ========================================
-const API_URL = "http://localhost:3000/reviews";
+const API_URL = "http://localhost:3000/";
 
 // ========================================
 // HJÄLPFUNKTIONER
@@ -117,6 +117,15 @@ const loadReviews = async () => {
   // TODO: Skicka GET-request till backend
   // TODO: Visa recensionerna med displayReviews()
   // TODO: Hantera fel
+  try {
+    const response = await axios.get(`${API_URL}/reviews`);
+
+    console.log({response: response.data.data});
+
+    displayReviews(response.data.data);
+  } catch (error) {
+    alert("Kunde ej hämta recensioner");
+  }
 };
 
 // ========================================
@@ -180,4 +189,5 @@ let review = form.elements.review.value;
  */
 window.addEventListener("load", async () => {
   // TODO: Anropa loadReviews()
+  loadReviews();
 });
