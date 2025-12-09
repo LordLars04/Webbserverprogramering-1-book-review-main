@@ -109,4 +109,17 @@ app.post("/reviews", (req, res) => {
     }
 });
 
+app.delete("/reviews/:id", (req, res) => {
+    const id = req.params.id; 
+    try {
+        const deleted = deleteRewiew(id);
+
+        if (deleted) {
+            res.status(200).json();
+        }
+    } catch (error) {
+
+    }
+});
+
 export default app;
