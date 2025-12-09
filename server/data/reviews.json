@@ -97,5 +97,14 @@
     "review": "Spännande",
     "id": "fe6c7469-8139-4556-9017-1e63cba54db5",
     "timestamp": "2025-12-02T12:41:01.628Z"
+  },
+  {
+    "bookTitle": "Oliver is a creepy guy",
+    "author": "Dante Buhler",
+    "reviewer": "Lars",
+    "rating": "4",
+    "review": "To much detail!!!",
+    "id": "e91f1786-0caf-440a-87bf-32772f0cffaf",
+    "timestamp": "2025-12-08T08:48:01.166Z"
   }
 ]
