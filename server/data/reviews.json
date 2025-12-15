@@ -1,32 +1,5 @@
 [
   {
-    "bookTitle": "Scooby Doo",
-    "author": "Hara",
-    "reviewer": "hatler",
-    "rating": "5",
-    "review": "daf",
-    "id": "b860257d-45ca-47b1-a2ef-d7cc5ad5a836",
-    "timestamp": "2025-11-24T09:45:47.787Z"
-  },
-  {
-    "bookTitle": "Scooby Doo",
-    "author": "Hara",
-    "reviewer": "hatler",
-    "rating": "5",
-    "review": "jhyguh",
-    "id": "bac8c8bd-fed8-49bf-853a-c8460555ac52",
-    "timestamp": "2025-11-24T09:54:38.832Z"
-  },
-  {
-    "bookTitle": "Jup der Franzose",
-    "author": "Alfons Ruedinger",
-    "reviewer": "Oliver",
-    "rating": "3",
-    "review": "So naja",
-    "id": "aa29e59f-eda7-4f29-bae5-8df2cffb6749",
-    "timestamp": "2025-11-25T12:55:10.554Z"
-  },
-  {
     "bookTitle": "10 kleine jägermeister",
     "author": "Emil Hultin",
     "reviewer": "Etnad",
@@ -45,15 +18,6 @@
     "timestamp": "2025-12-01T08:59:41.267Z"
   },
   {
-    "bookTitle": "Luther",
-    "author": "Heinz Willhelm Ruediger",
-    "reviewer": "Lars",
-    "rating": "3",
-    "review": "Nicht so meins\n",
-    "id": "ba9a07d7-50fc-47a7-a516-6bde8c101534",
-    "timestamp": "2025-12-01T09:12:02.646Z"
-  },
-  {
     "bookTitle": "Dante in Deutschland",
     "author": "Lars",
     "reviewer": "Lars",
@@ -61,33 +25,6 @@
     "review": "Echter Klassiker",
     "id": "6e1ca08b-1e43-4498-8b19-35f6db30bcd2",
     "timestamp": "2025-12-01T09:25:52.343Z"
-  },
-  {
-    "bookTitle": "Buch",
-    "author": "Melvin",
-    "reviewer": "Rainer",
-    "rating": "4",
-    "review": "Naja",
-    "id": "b477dd9d-c205-4778-ba50-778cf7cf7b24",
-    "timestamp": "2025-12-01T09:41:30.424Z"
-  },
-  {
-    "bookTitle": "Hugendubel",
-    "author": "Franz",
-    "reviewer": "Oliver",
-    "rating": "5",
-    "review": "hkjb",
-    "id": "fbc4245f-dbb7-4005-aca6-52cf19c89155",
-    "timestamp": "2025-12-02T11:45:20.593Z"
-  },
-  {
-    "bookTitle": "asdf",
-    "author": "adf",
-    "reviewer": "asdf",
-    "rating": "3",
-    "review": "asdfas",
-    "id": "6515e547-1efb-45be-970a-892afa8b85ee",
-    "timestamp": "2025-12-02T12:02:03.181Z"
   },
   {
     "bookTitle": "Melvins Äventyr",

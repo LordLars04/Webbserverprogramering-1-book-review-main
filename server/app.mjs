@@ -68,6 +68,34 @@ const saveReview = (reviewData) => {
     
 };
 
+const deleteRewiew = (reviewId) => {
+    const data = fs.readFileSync(filePath, "utf-8");
+    try {
+       // Kontrollera om filen existerar
+       if(!fs.existsSync(filePath)) {
+        return false; // Return false om filen inte existerar
+       } 
+
+       let reviews = JSON.parse(data); // Konvertera till JavaScript array
+
+       // Filtrera bort recensionen med matchande id 
+       // filter() skapar en ny array som INTE innehåller rexensionen vi vill radera
+
+       const filteredReviews = reviews.filter((review) => review.id !== reviewId);
+
+       // Kolla om något faktiskt raderades genom att jämföra längden på varje array
+       if(reviews.length === filteredReviews.length) return false; // Ingen recension med det id hittades
+
+       // Spara den uppdaterade arrayen utan den raderade rexensionen
+       fs.writeFileSync(filePath, JSON.stringify(filteredReviews, null, 2));
+       return true; 
+    } catch (error) {
+        console.log("Error during delete:", error);
+        return false;
+        
+    }
+};
+
 app.get("/reviews", (req, res) => {
     try {
         const reviews = getReviews();
@@ -110,16 +138,25 @@ app.post("/reviews", (req, res) => {
 });
 
 app.delete("/reviews/:id", (req, res) => {
-    const id = req.params.id; 
+    console.log("DELETE request received");
+    const reviewId = req.params.id; 
+
+    console.log({reviewId: reviewId});
     try {
-        const deleted = deleteRewiew(id);
+        const deleted = deleteRewiew(reviewId);
 
         if (deleted) {
-            res.status(200).json();
+            res.status(200).json({ success: true});
+        }
+        else {
+            res.status(404).json({ success: false, message: "Review not found"});
         }
     } catch (error) {
-
+       console.log({error: error});
+       res.status(500).json({ success: false });
     }
 });
+
+
 
 export default app;

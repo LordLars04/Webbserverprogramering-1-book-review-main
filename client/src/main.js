@@ -97,7 +97,9 @@ const displayReviews = (reviews) => {
     reviewsContainer.appendChild(reviewDiv);
   });
 
-  // TODO: Lägg till event listeners på radera-knappar
+  addDeleteListeners();
+
+  
 };
 
 /**
