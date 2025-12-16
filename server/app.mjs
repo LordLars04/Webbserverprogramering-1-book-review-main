@@ -160,3 +160,13 @@ app.delete("/reviews/:id", (req, res) => {
 
 
 export default app;
+
+
+// npm init -y
+// npm install express cors uuid
+// npx nodemon --experimental-modules server/app.mjs
+// npm install --save-dev nodemon
+// client 
+// npm init vite@latest
+// npm install
+// npm install axios
